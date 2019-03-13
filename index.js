@@ -230,6 +230,7 @@ module.exports = async (opts = {}, {cwd = process.cwd(), env = process.env, stdo
   const context = {cwd, env, stdout: stdout || process.stdout, stderr: stderr || process.stderr};
   context.logger = getLogger(context);
   context.logger.log(`Running ${pkg.name} version ${pkg.version}`);
+  context.logger.log(`DV01 RULEZ`);
   try {
     const {plugins, options} = await getConfig(context, opts);
     context.options = options;
